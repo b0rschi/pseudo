@@ -5,15 +5,25 @@ Vue.use(VueRouter);
 
 import ProductsList from './components/Products.vue';
 import Cart from "./components/Cart.vue";
+import Error404 from "./components/E404.vue"
 
 const routes = [
 	{
+		path: '',
+		redirect: {name: 'products'}
+	},
+	{
+		name: 'products',
 		path: '/products',
 		component: ProductsList
 	},
 	{
 		path: '/cart',
 		component: Cart
+	},
+	{
+		path: '*',
+		component: Error404
 	}
 ];
 

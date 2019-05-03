@@ -1,7 +1,12 @@
 <template>
+
 	<div>
 		<h1>Page not found</h1>
+		<div>
+			<router-link :to="{name: 'products'}">start shopping</router-link>
+		</div>
 	</div>
+	
 </template>
 
 <script>
