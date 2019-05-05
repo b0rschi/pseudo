@@ -7,6 +7,7 @@ import ProductsList from './components/Products.vue';
 import Cart from "./components/Cart.vue";
 import Error404 from "./components/E404.vue"
 import Product from "./components/Product.vue"
+import Checkout from './components/Checkout.vue'
 
 const routes = [
 	{
@@ -26,6 +27,10 @@ const routes = [
 		path: '/cart',
 		name: 'cart',
 		component: Cart
+	},
+	{
+		path: '/checkout',
+		component: Checkout
 	},
 	{
 		path: '*',
