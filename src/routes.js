@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 import ProductsList from './components/Products.vue';
 import Cart from "./components/Cart.vue";
 import Error404 from "./components/E404.vue"
+import Product from "./components/Product.vue"
 
 const routes = [
 	{
@@ -16,6 +17,10 @@ const routes = [
 		name: 'products',
 		path: '/products',
 		component: ProductsList
+	},
+	{
+		path: '/products/:id',
+		component: Product
 	},
 	{
 		path: '/cart',

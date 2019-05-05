@@ -5,13 +5,13 @@
 	<v-toolbar color='rgba(213, 235, 152, 1)'>
 	    <v-toolbar-title class='ml-3 lime--text text--darken-3'><i>PseudoPotatoShop</i></v-toolbar-title>
 	    <v-spacer></v-spacer>
-	   	<span class="mr-5"><v-icon class='mx-1'>shopping_cart</v-icon>In Cart: <span class="mx-1">0</span></span>     
+	   	<span class="mr-5"><v-icon class='mx-1'>shopping_cart</v-icon>In Cart: <span class="mx-1">{{sizeCart}}</span></span>     
     </v-toolbar>
   	
 	<v-container>	
 		
 		<v-layout align-start row fill-height wrap>
-			<v-flex xs12 sm4 md4 lg4 offset-xs2 offset-sm0 offset-md0 offset-lg0>
+			<v-flex xs12 sm4 md3 offset-xs2 offset-sm0 class='mb-2' >
 				<v-navigation-drawer  floating permanent stateless       value="true" class='light-green lighten-5'>
 					<v-list dense>
 					  <v-list-tile v-for="item in menuList" :key='item.text' router :to="item.url">
@@ -19,7 +19,7 @@
 						    <v-icon>{{item.icon}}</v-icon>
 						  </v-list-tile-action>
 						  <v-list-tile-content>
-						    <v-list-tile-title>{{item.text}}</v-list-tile-title>
+						    <v-list-tile-title class='body-2'>{{item.text}}</v-list-tile-title>
 						  </v-list-tile-content>
 					  </v-list-tile>
 					</v-list>
@@ -27,7 +27,9 @@
 			</v-flex>
 		  
 		  	<v-flex xs12 sm8 md8 lg8>
-			  <router-view></router-view>
+		  		<transition name='slide' mode='out-in'>
+			  		<router-view></router-view>
+				</transition>
 			</v-flex>	  	  
 	  	</v-layout>
 		
@@ -53,6 +55,9 @@ export default {
   computed: {
   	...mapGetters('menu', {
   		menuList: 'items'
+  	}),
+  	...mapGetters('cart', {
+  		sizeCart: 'cntCart'
   	})
   }
 }
