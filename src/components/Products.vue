@@ -21,7 +21,7 @@
 		    				<router-link class="subheading" 
 		    							tag='h3' 
 		    							:to='"/products/" + item.id'><a class="links">{{item.title}}</a></router-link>
-		    			  <!--<h3 >{{item.title}}</h3>-->
+		    			  
 		    			  <v-flex xs12 class="mt-1">
 		    			  	<div>Price: {{item.price}}</div>
 		    			  </v-flex>
@@ -54,7 +54,9 @@ import {mapActions} from 'vuex';
 
 export default{
 	created(){
+		/*
 		this.$store.dispatch('products/addProducts');
+		*/
 	},
 	computed:{
 		...mapGetters('products', {

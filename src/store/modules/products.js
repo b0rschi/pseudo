@@ -3,7 +3,7 @@ import Vue from 'vue';
 export default {
 	namespaced: true,
 	state:{
-		items: []
+		items: getProducts()
 	},
 	getters:{
 		items(state){
@@ -32,7 +32,7 @@ export default {
 		}
 	}
 }
-/*
+
 function getProducts(){
 	return [
 		{
@@ -55,4 +55,4 @@ function getProducts(){
 		}
 
 	]
-}*/
+}

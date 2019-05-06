@@ -22,7 +22,7 @@ export default {
 	},
 	getters:{
 		INFO(state){
-			//console.log('fromCheck: ', state.info);
+			
 			
 			return state.info;
 		},

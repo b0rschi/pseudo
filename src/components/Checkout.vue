@@ -131,42 +131,7 @@ export default{
       AppTable
     }
 
-	/*
 	
-
-    created(){
-    	console.log(1);
-    	console.log(this.info);
-      
-      
-    },
-    methods: {
-    	
-      ,/*
-      onUpdateValue(index, value){        
-        this.$store.dispatch('SET_VALUE',{
-          value: value,
-          index: index
-        })
-      }
-    },
-    computed: {
-    	
-      info(){
-        return this.$store.getters.INFO
-      },
-      ,
-    
-      progressWidth(){
-        return 100 / this.info.length * this.done
-        
-      } 
-    },
-    components: {
-      AppInput,
-      AppTable
-    }
-  }*/
 }
 </script>
 
